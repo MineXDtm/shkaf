@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5ebo050fl8fi"]
+
+[ext_resource type="ArrayMesh" uid="uid://jd3u4b7bj8sx" path="res://street_lamp/source/lamp.obj" id="1_phwx4"]
+[ext_resource type="Material" uid="uid://bxqkyv0kckfma" path="res://lamp.tres" id="2_udjls"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mtumu"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy = 16.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_f0k78"]
+material = SubResource("StandardMaterial3D_mtumu")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qiwt0"]
+points = PackedVector3Array(-0.024361, 5.04212, 0.0599918, -1.31952, 5.78227, -0.0941562, -1.31952, 5.78227, 0.0908311, -0.0860153, -0.0154195, 0.0599918, 0.0372934, -0.0154195, -0.0941562, 0.0372934, 4.88737, -0.0632928, 0.0372934, -0.0154195, 0.0908311, -1.07276, 5.84312, -0.12502, -0.980282, 5.75097, 0.121695, -0.0551882, -0.0154195, -0.0941562, 0.0372934, 2.02012, 0.0908311, 0.0372934, 2.02012, -0.0941562, -1.25773, 5.75097, 0.121695, 0.0681206, 3.03673, 0.0599918, -1.2269, 5.72025, -0.12502, 0.0372934, 4.91867, 0.0599918, -0.980282, 5.75097, -0.12502, -0.14767, 5.16558, -0.0632928, 0.0619777, 0.13947, -0.0308655, 0.0681206, 3.03673, -0.0632928, -1.07276, 5.84312, 0.121695, -1.19607, 5.87442, 0.121695, -0.14767, 5.16558, 0.0599918, -0.024361, 5.04212, -0.0632928, -1.07276, 5.59622, 0.121695, -1.2269, 5.81298, -0.12502, -1.01111, 5.62809, -0.12502, -1.15443, 5.84801, -0.0923532, -1.13442, 5.87442, 0.121695, -1.10359, 5.62809, -0.12502, -0.980282, 5.65881, 0.121695, 0.00646621, 4.97953, -0.0632928)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="lamp" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.185949, 0)
+mesh = ExtResource("1_phwx4")
+surface_material_override/0 = ExtResource("2_udjls")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="lamp"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.963413, 2.44845, 0.118148)
+visible = false
+light_size = 1.0
+light_specular = 16.0
+shadow_enabled = true
+spot_range = 6.95111
+spot_angle = 26.4705
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="lamp"]
+transform = Transform3D(0.3497, 0.0629979, 0, -0.230165, 0.0957157, 0, 0, 0, 0.190184, -1.11216, 5.68768, 0)
+mesh = SubResource("SphereMesh_f0k78")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="lamp"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.14797, 5.37434, 0)
+light_energy = 4.0
+light_indirect_energy = 16.0
+light_specular = 16.0
+shadow_enabled = true
+spot_range = 7.12647
+spot_angle = 36.5401
+
+[node name="StaticBody3D" type="StaticBody3D" parent="lamp"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lamp/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_qiwt0")

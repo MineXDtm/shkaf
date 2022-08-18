@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cvq3uh4mvciqf"
+path.s3tc="res://.godot/imported/used-stainless-steel2_ao.png-64e1cb18bd30326f8018fcc47e9c141e.s3tc.ctex"
+path.etc2="res://.godot/imported/used-stainless-steel2_ao.png-64e1cb18bd30326f8018fcc47e9c141e.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc", "etc2"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://used-stainless-steel2-bl/used-stainless-steel2_ao.png"
+dest_files=["res://.godot/imported/used-stainless-steel2_ao.png-64e1cb18bd30326f8018fcc47e9c141e.s3tc.ctex", "res://.godot/imported/used-stainless-steel2_ao.png-64e1cb18bd30326f8018fcc47e9c141e.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/bptc_ldr=0
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=8
+roughness/src_normal="res://used-stainless-steel2-bl/used-stainless-steel2_normal-ogl.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

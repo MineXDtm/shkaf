@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://dfhny53117y4x"]
+
+[ext_resource type="Texture2D" uid="uid://b1bh3r1sgritb" path="res://pebbled-asphalt1-unity/pebbled_asphalt_albedo.png" id="1_ccykv"]
+[ext_resource type="Texture2D" uid="uid://bhp2svpgf6bm3" path="res://pebbled-asphalt1-unity/pebbled_asphalt_ao.png" id="2_i8dpe"]
+[ext_resource type="Texture2D" uid="uid://b66hdi6ksrlnh" path="res://pebbled-asphalt1-unity/pebbled_asphalt_Height.png" id="3_4dmnj"]
+[ext_resource type="Texture2D" uid="uid://cqtb7hxutyr5g" path="res://pebbled-asphalt1-unity/pebbled_asphalt_Normal-ogl.png" id="4_ajsax"]
+
+[resource]
+albedo_color = Color(0.223529, 0.223529, 0.223529, 1)
+albedo_texture = ExtResource("1_ccykv")
+normal_enabled = true
+normal_scale = 1.36
+normal_texture = ExtResource("4_ajsax")
+anisotropy = -1.0
+ao_enabled = true
+ao_texture = ExtResource("2_i8dpe")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_4dmnj")

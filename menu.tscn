@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1bscp8lu0qop"]
+
+[ext_resource type="Script" path="res://Button.gd" id="1_4flx5"]
+
+[node name="menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -282.0
+offset_right = 100.0
+offset_bottom = -208.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "начать"
+script = ExtResource("1_4flx5")
+metadata/_edit_layout_mode = 1
+
+[connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]

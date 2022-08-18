@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://676hct238ibg"]
+
+[ext_resource type="Material" uid="uid://c4mt4jqt6bfmj" path="res://street.tres" id="1_io5y0"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_64gq3"]
+material = ExtResource("1_io5y0")
+size = Vector2(5, 5)
+
+[node name="floor" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_64gq3")
